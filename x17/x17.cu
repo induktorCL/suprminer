@@ -1,7 +1,8 @@
 /**
  * X17 algorithm (X15 + sha512 + haval256)
  */
-
+// the next is necessary otherwise you get not declared in linux (in windows it exists in compat.h but on linux does not.
+#include <unistd.h>
 extern "C" {
 #include "sph/sph_blake.h"
 #include "sph/sph_bmw.h"
